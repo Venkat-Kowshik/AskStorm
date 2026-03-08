@@ -17,7 +17,7 @@ class PortfolioAgent:
 
         self.llm = LLMService()
 
-        reader = PdfReader("data/Profile.pdf")
+        reader = PdfReader("data/profile_ibm.pdf")
 
         self.linkedin = ""
 

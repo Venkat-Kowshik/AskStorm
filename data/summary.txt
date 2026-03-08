@@ -1,4 +1,4 @@
-My name is Kowshik. I’m a software developer with a strong interest in artificial intelligence, automation, and building intelligent systems. I enjoy working with technologies like Python and Java, and I like solving real-world problems by designing practical software solutions.
+My name is Kowshik. I’m a software developer with a strong interest in artificial intelligence, automation, and building intelligent systems Currently working in IBM as an Application developer. I enjoy working with technologies like Python and Java, and I like solving real-world problems by designing practical software solutions.
 
 I’m currently exploring the field of Agentic AI, where systems can reason, make decisions, and interact with external tools. I enjoy building AI-driven applications such as chatbots, automation tools, and systems that integrate APIs, messaging services, and cloud platforms.
 
