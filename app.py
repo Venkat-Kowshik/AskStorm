@@ -11,52 +11,91 @@ st.set_page_config(
     layout="wide"
 )
 
-# ---------- CUSTOM CSS ----------
+# ---------- CUSTOM CSS ----------st.markdown("""
 st.markdown("""
 <style>
 
+/* App background */
+[data-testid="stAppViewContainer"] {
+    background: radial-gradient(circle at top, #0f0c29, #0b0b1a);
+    color: #E0E7FF;
+}
+
+/* Header styling */
+h1 {
+    color: #00F5FF;
+    text-shadow: 0 0 4px #00F5FF ; 
+}
+
+/* Caption text */
+.css-1d391kg {
+    color: #A78BFA;
+}
+
+/* Chat messages */
+.stChatMessage {
+    border-radius: 12px;
+    padding: 10px;
+    background: rgba(20, 20, 40, 0.8);
+    border: 1px solid #6D28D9;
+    box-shadow: 0 0 12px rgba(168,85,247,0.5);
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(90deg, #4C1D95, #22D3EE);
+    color: #F9FAFB;
+    border-radius: 8px;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    box-shadow: 0 0 4px rgba(15, 23, 42, 0.6);
+}
+
+/* Button hover */
+button:hover {
+    background: linear-gradient(90deg, #1E293B, #0F172A); /* much darker */
+    color: #F9FAFB;                                       /* force light text */
+    box-shadow: 0 0 6px rgba(15, 23, 42, 0.8);
+}
+
+/* Suggested prompt buttons */
+div.stButton > button {
+    width: 100%;
+}
+
+/* Sidebar styling */
+section[data-testid="stSidebar"] {
+    background: #060613;
+    border-right: 1px solid #7C3AED;
+}
+
+/* Profile image styling */
+.sidebar-profile img {
+  #  width: 120px;          /* same width & height => circle */
+  #  height: 150px;
+    border-radius: 50%;    /* makes it circular */
+    object-fit: cover;     /* crops to a circle nicely */
+    box-shadow:
+        0 0 10px #00F5FF,
+        0 0 20px #7C3AED,
+        0 0 30px #EC4899;
+}
+
+/* Container spacing */
 .block-container {
     padding-top: 2rem;
 }
 
-.stChatMessage {
-    border-radius: 10px;
-}
-
-.hero-title {
-    font-size:28px;
-    font-weight:bold;
-}
-
-.hero-subtitle {
-    font-size:16px;
-    color:grey;
-}
-
 </style>
 """, unsafe_allow_html=True)
-
-
-
 # ---------- HEADER ----------
 st.title("⚡ AskStorm AI")
 st.caption("Your AI guide to Kowshik's projects, skills, and technical expertise")
 
 # ---------- SIDEBAR ----------
-st.markdown("""
-    <style>
-    .sidebar-profile img {
-        border-radius: 50%;
-        object-fit: cover;
-        box-shadow: 0 0 15px rgba(0,0,0,0.15);
-    }
-    </style>
-    """, unsafe_allow_html=True)
 with st.sidebar:
-    
-
+ 
     st.markdown('<div class="sidebar-profile">', unsafe_allow_html=True)
-    st.image("agent/assets/profile.png", width=200)
+    st.image("agent/assets/profile.png", width=180,)
     st.markdown('</div>', unsafe_allow_html=True)
 
     st.header("👨‍💻 Venkata Sai Kowshik")
@@ -109,7 +148,7 @@ st.markdown("### 💡 Suggested Questions")
 suggestions = [
     "What projects has Kowshik worked on?",
     "What technologies does Kowshik know?",
-    "Tell me about the Vehicle Intelligence System",
+    "Tell me about the Recent project you have worked on",
     "What cloud technologies does Kowshik use?"
 ]
 
@@ -153,15 +192,13 @@ if prompt:
         full_response = ""
 
         # ---------- SMART RENDERING ----------
-        # If response contains a Markdown table, render instantly
         if "|" in response and "---" in response:
             message_placeholder.markdown(response, unsafe_allow_html=True)
             full_response = response
         else:
-            # typing animation for normal text
             for word in response.split():
                 full_response += word + " "
-                time.sleep(0.02)
+                time.sleep(0.09)
                 message_placeholder.markdown(full_response + "▌", unsafe_allow_html=True)
 
             message_placeholder.markdown(full_response, unsafe_allow_html=True)
