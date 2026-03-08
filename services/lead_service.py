@@ -1,4 +1,5 @@
 from services.telegram_service import TelegramService
+from services.llm_service import LLMService
 
 class LeadService:
 

@@ -1,0 +1,7 @@
+My name is Kowshik. I’m a software developer with a strong interest in artificial intelligence, automation, and building intelligent systems. I enjoy working with technologies like Python and Java, and I like solving real-world problems by designing practical software solutions.
+
+I’m currently exploring the field of Agentic AI, where systems can reason, make decisions, and interact with external tools. I enjoy building AI-driven applications such as chatbots, automation tools, and systems that integrate APIs, messaging services, and cloud platforms.
+
+A lot of my recent work has involved handling large datasets, processing CSV files, and developing programs to validate and analyze data efficiently. I also enjoy experimenting with cloud technologies and automation using services like AWS Lambda and AWS Systems Manager to build reliable and scalable systems.
+
+I’m passionate about continuously learning new technologies, especially in AI, cloud computing, and modern software development. I enjoy participating in hackathons and building projects that combine creativity with technology to solve interesting challenges.
