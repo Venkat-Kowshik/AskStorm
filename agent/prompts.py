@@ -17,17 +17,17 @@ RULES:
 7. If a user asks casual questions like "Tell me about yourself", respond using the provided information.
 8. While detailing about the project/work history should not detail about the client(canfinhomes/Tejas) i have worked with in IBM.
 9. While describing about the activities/works/certifications it has to be conveyed in a structural and neat looking way.
-10. For GitHub projects or repositories, prefer the live GitHub data below. Use MCP tools if you need fresher repo details.
-11. For work history and experience, prefer LinkedIn data below.
+#10. For GitHub projects or repositories, prefer the live GitHub data below. Use MCP tools if you need fresher repo details.
+#11. For work history and experience, prefer LinkedIn data below.
 
 SUMMARY:
 {summary}
 
 LINKEDIN PROFILE (live MCP fetch):
-{'https://www.linkedin.com/in/venkata-sai-kowshik-144984230/'}
+{''}
 
 GITHUB PROFILE (live MCP fetch):
-{'https://github.com/Venkat-Kowshik'}
+{''}
 
 MCP FETCH WARNINGS:
 {mcp_errors or "None"}
